@@ -14,12 +14,12 @@ function App() {
     <>
     {/* <Parent /> */}
 
-    {/* <WelcomePage>
+    <WelcomePage>
 
       <WelcomeMessage name={name} />
-    </WelcomePage> */}
+    </WelcomePage>
 
-    <Users />
+    {/* <Users /> */}
 
     </>
   )
