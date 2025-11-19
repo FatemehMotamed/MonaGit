@@ -202,4 +202,5 @@ function getName(name) {
     }
     emailCustomer("m@gmail.com")
 }
-getName("tv")
+// getName("tv")
+// getName("notebook")

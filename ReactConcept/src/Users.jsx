@@ -14,6 +14,7 @@ function Users() {
 
             if(!id){
                 setUsers([])
+                setIsLoad(true)
                 return
             }
 
@@ -27,9 +28,9 @@ function Users() {
                 console.log(data);
                 if(id){
                     setUsers([data])
+                    setIsLoad(true)
                 }
                 
-                setIsLoad(true)
 
             }
 

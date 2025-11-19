@@ -11,12 +11,8 @@ const clickHandler = () =>{
 }
   return (
     <>
-
-
         <ChildA  name={name} />
         <ChiledB  name = {name} clickHandler = {clickHandler}/>
-
-
     </>
   )
 }
