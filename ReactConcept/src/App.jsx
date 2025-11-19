@@ -1,4 +1,5 @@
 
+import ParentCounter from "./ParentCounter";
 import Users from "./Users";
 import WelcomeMessage from "./WelcomeMessage";
 import WelcomePage from "./WelcomePage";
@@ -14,12 +15,14 @@ function App() {
     <>
     {/* <Parent /> */}
 
-    <WelcomePage>
+    {/* <WelcomePage>
 
       <WelcomeMessage name={name} />
-    </WelcomePage>
+    </WelcomePage> */}
 
-    {/* <Users /> */}
+    <Users />
+
+    {/* <ParentCounter /> */}
 
     </>
   )
