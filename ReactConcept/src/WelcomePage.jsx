@@ -1,14 +1,13 @@
 
 
 
-function WelcomePage({children}) {
+function WelcomePage( {children} ) {
   return (
 
     <>
-    
-    {children}
+      {children}
     </>
-   
+
   )
 }
 

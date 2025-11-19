@@ -8,7 +8,6 @@ function CourseCard({name, description}) {
     <div className={`${styles.container} ${show ? styles.selected : styles.unselected}`}>
         <h1 >{name}</h1>
         <p >{description}</p>
-
         <button onClick={()=>setshow(!show)}>change</button>
     </div>
   )

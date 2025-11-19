@@ -30,10 +30,7 @@ const Contacts= () => {
       const newContact = {...form, id: v4()}
       setContacts((contacts)=>([...contacts, newContact]))
       console.log(contacts);
-      
-      
-      
-    }
+          }
     event.preventDefault()
     
   }

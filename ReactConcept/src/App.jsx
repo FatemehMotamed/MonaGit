@@ -7,19 +7,18 @@ import WelcomePage from "./WelcomePage";
 
 function App() {
 
-  const name = "mona";
+  // const name = "mona";
 
 
   return (
     <>
-    {/* <Parent /> */}
+      {/* <Parent /> */}
 
-    <WelcomePage>
+      {/* <WelcomePage>
+        <WelcomeMessage name={name} />
+      </WelcomePage> */}
 
-      <WelcomeMessage name={name} />
-    </WelcomePage>
-
-    {/* <Users /> */}
+      <Users />
 
     </>
   )

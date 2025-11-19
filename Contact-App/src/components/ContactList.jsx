@@ -1,21 +1,21 @@
 import ContactItem from "./ContactItem"
 import styles from "./ContactList.module.css"
-const ContactList = ({contacts, removeHandler}) => {
+const ContactList = ({ contacts, removeHandler }) => {
 
-  if (!contacts){
+  if (!contacts) {
     return <div > please wait ...</div>
   }
 
-    return (
+  return (
     <>
 
-    {
-      contacts.length ?
-      contacts.map((contact)=>(<ContactItem  contact={contact} key={contact.id} removeHandler={removeHandler} />))
-      :
-      (<p>no contact yet</p>)
-    }
-    
+      {
+        contacts.length ?
+          contacts.map((contact) => (<ContactItem contact={contact} key={contact.id} removeHandler={removeHandler} />))
+          :
+          (<p>no contact yet</p>)
+      }
+
 
     </>
   )
