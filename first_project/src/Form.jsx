@@ -43,7 +43,6 @@ function Form() {
             <input type="checkbox" name="remember" id='id_remember' value={form.remember} checked={form.remember} onChange={ChangeHandler} />
 
             <button>send</button>
-
         </form>
     
     </>
