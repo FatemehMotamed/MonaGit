@@ -5,56 +5,53 @@ function Users() {
     const [isLoad, setIsLoad] = useState(false)
     const [error, setError] = useState(false)
     const [id, setId] = useState("")
-    let timeoutId 
+    let timeoutId
 
     useEffect(() => {
 
         const controller = new AbortController()
         const getUsers = async () => {
 
-            if(!id){
-                setUsers([])
-                setIsLoad(true)
-                return
-            }
+            // if (!id) {
+            //     setUsers([])
+            //     setIsLoad(true)
+            //     return
+            // }
 
             try {
 
-                const res = await fetch(`https://jsonplaceer.typicode.com/photos/${id}`,
-                    {signal : controller.signal}
+                const res = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`,
+                    { signal: controller.signal }
                 )
                 
                 
                 // if (!res.ok) throw new Error(`${res.status}***********`)
                 const data = await res.json()
                 console.log(data);
-                if(id){
+                if (id) {
                     setUsers([data])
                     setIsLoad(true)
                 }
-                
-
+                else {
+                    setUsers(data)
+                    setIsLoad(true)
+                }
             }
 
             catch (error) {
-                if (error.name !== "AbortError" && !controller.signal.aborted){
+                if (error.name !== "AbortError" && !controller.signal.aborted) {
                     console.log(error);
                     setError(error.message)
-
                 }
-
-
             }
-
-
         }
         timeoutId = setTimeout(getUsers, 500);
 
-        return () =>{
+        return () => {
             clearTimeout(timeoutId)
             controller.abort()
             console.log("Aborted");
-            
+
         }
 
     }, [id])
