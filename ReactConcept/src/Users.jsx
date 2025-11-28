@@ -20,10 +20,12 @@ function Users() {
 
             try {
 
-                const res = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`,
+                const res = await fetch(`https://jsonplaceer.typicode.com/photos/${id}`,
                     {signal : controller.signal}
                 )
-                if (!res.ok) throw new Error(res.status)
+                
+                
+                // if (!res.ok) throw new Error(`${res.status}***********`)
                 const data = await res.json()
                 console.log(data);
                 if(id){
