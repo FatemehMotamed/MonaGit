@@ -1,0 +1,45 @@
+.off {
+    display: none;
+}
+
+.on {
+    display: block;
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    z-index: 10;
+    border-radius: 20px;
+}
+
+.on img {
+    width: 20px;
+    height: 20px;
+    max-height: 100%;
+}
+
+.on li {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.isParent {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 20%;
+    height: 30px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+select {
+    padding: 0 20px;
+    width: 10%;
+    height: 30px;
+    border-radius: 10px;
+    margin-left: 20px;
+}

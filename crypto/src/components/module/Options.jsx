@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Options({ name, img}) {
+function Options({ name, img, selectLi }) {
     return (
         <>
-            <option value={name}></option>
+            <li onClick={() => selectLi(name)}>
+                <img src={img} alt={`لوگوی${name}`} /> <p>{name}</p>
+            </li>
 
         </>
     )

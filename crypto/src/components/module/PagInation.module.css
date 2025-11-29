@@ -1,0 +1,21 @@
+.on {
+font-size: 18px;
+background-color: rgb(29, 29, 140);
+font-weight: bold;
+color: white;
+}
+
+article {
+    display: flex;
+    gap: 20px;
+
+}
+
+.size {
+    width: 110px;
+}
+
+.red {
+    color: white;
+    background-color:rgb(29, 29, 140) ;
+}

@@ -7,6 +7,8 @@ import Search from './Search'
 import PagInation from './PagInation'
 import {createCoinURL} from '../../service/cryptoApi'
 function Table() {
+      const [userType, setUserType] = useState('')
+    
     const [page , setPage] = useState(1)
     const [coins, setCoins] = useState([])
     const [clickCoin, setclickCoin] = useState([])
@@ -44,6 +46,7 @@ function Table() {
         setclickCoin(chartCoin)
         setcloseButton(true)
     }
+
     const hiddenFunction = () => {
         setcloseButton(false)
         setclickCoin([])
@@ -52,7 +55,7 @@ function Table() {
     return (
         <>
             <div className={styles.search}>
-                <Search coins={coins} />
+                <Search coins={coins} userType={userType} setUserType={setUserType}/>
             </div>
 
             <div className={styles.forChart}>
@@ -75,13 +78,14 @@ function Table() {
                 </table>
                 <article className={`${styles.chartPage} ${closeButton ? styles.chartVisible : styles.chartHidden}`}>
                     {
-                        clickCoin.map(item => <Chart key={item.id} img={item.image} name={item.name} hiddenFunction={hiddenFunction} />)
+                        clickCoin.map(item => <Chart key={item.id} id={item.id} img={item.image} name={item.name} hiddenFunction={hiddenFunction} />)
                     }
                 </article>
             </div>
-            <div>
+            <section className={styles.pagInation}>
+                <header>Page&nbsp;:</header>
                <PagInation page={page} setPage={setPage}/> 
-            </div>
+            </section>
         </>
     )
 }
