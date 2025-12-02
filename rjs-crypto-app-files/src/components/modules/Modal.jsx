@@ -38,7 +38,7 @@ function Modal({modalOn,setModalOn,chartType,setChartType,chartData,modalCoin}) 
             
                 <Line type="monotone" dataKey={chartType} stroke="#8884d8" activeDot={{ r: 8 }} />
                 <YAxis dataKey={chartType} domain={["auto","auto"]} />
-                <XAxis dataKey="date" hide />
+                <XAxis dataKey="date" />
                 <Legend />
                 <Tooltip />
                 </LineChart>
