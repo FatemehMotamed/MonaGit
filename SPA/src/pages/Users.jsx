@@ -1,8 +1,11 @@
 import React from 'react'
+import MainLayout from '../layouts/MainLayout'
 
 function Users() {
   return (
-    <div>Users</div>
+    <MainLayout >
+      <div>Users</div>
+    </MainLayout>
   )
 }
 
