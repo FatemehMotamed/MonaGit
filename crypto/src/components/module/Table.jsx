@@ -27,7 +27,7 @@ function Table() {
                 console.log(res)
                 console.log(data)
             } catch (error) {
-                if (error.name !== 'AbortError' && !controller.signal.eborted) {
+                if (error.name !== 'AbortError' && !controller.signal.aborted) {
                     console.log(error.message)
                     setErrors(error.message)
                 }

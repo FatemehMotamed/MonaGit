@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import HomePahe from "./pages/HomePahe"
 import AboutUs from "./pages/AboutUs"
 import Users from "./pages/Users"
@@ -14,25 +14,21 @@ function App() {
     <>
 
       <Routes>
-          <Route path="/" element={<HomePahe />} />
-          <Route path="/about" element={<AboutUs />} >
+        <Route path="/" element={<HomePahe />} />
+        <Route path="/about" element={<AboutUs />} >
 
-            <Route path="programmers" element={<Programmers />} />
-            <Route path="customers" element={<Customers />} />
-            
-        
-
-            </Route>
+          <Route path="programmers" element={<Programmers />} />
+          <Route path="customers" element={<Customers />} />
           
-       
-          <Route path="/users" element={<Users />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:id" element={<CourseSinglePage />} />
-          <Route path="*" element={<PageNotFound />} />
+        </Route>
+        <Route path="/users" element={<Users />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:id" element={<CourseSinglePage />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
-    
 
-      
+
+
     </>
   )
 }
