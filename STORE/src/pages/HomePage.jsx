@@ -46,12 +46,14 @@ function HomePage() {
                 <Search />
                 {/* <input type="text" onChange={changeHandler} className='border border-gray-400' />
                 <button>search</button> */}
-                <section className='flex flex-wrap gap-3'>
-                    {
-                        state.resultSearch && state.resultSearch.length > 0 ?
-                            state.resultSearch.map(product => <Card key={product.id} product={product} />) : <Boxes />
-
-                    }
+                 <section className='flex flex-wrap gap-3'>
+                    {state.resultSearch && state.resultSearch.length > 0 ? (
+                        state.resultSearch.map(product => <Card key={product.id} product={product} />)
+                    ) : state.data && state.data.length > 0 ? (
+                        state.data.map(product => <Card key={product.id} product={product} />)
+                    ) : (
+                        <Boxes />
+                    )}
                 </section>
             </div>
         </>
