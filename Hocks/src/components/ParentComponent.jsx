@@ -1,7 +1,12 @@
-import React, { useMemo, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import ChiledComponent from './ChiledComponent'
+import { useTitle } from '../hooks/useTitle';
 
 function ParentComponent() {
+    // useEffect(()=>{
+    //         document.title = "Memo"
+    //     }, [])
+    useTitle("Memo")
     console.log("parent rendered");
     
     const [counter, setCounter] = useState(0)
@@ -15,10 +20,10 @@ function ParentComponent() {
         return counter
     },[counter])
 
-    const numberHandler = ()=>{
+    const numberHandler = useCallback(()=>{
 
         setNumber((number)=> number+1)
-    }
+    }, [number])
 
     const counterHandler = ()=>{
         setCounter((counter)=> counter+1)
@@ -26,7 +31,7 @@ function ParentComponent() {
     return (
         <>
         parent counter : {slow}
-        <ChiledComponent number= {number} />
+        <ChiledComponent number= {number} numberHandler = {numberHandler} />
 
         <button onClick={numberHandler}>+number</button>
         <button onClick={counterHandler}>+counter</button>
