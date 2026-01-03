@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import BoxInBasket from '../components/BoxInBasket'
 import { ProductContext } from '../contexts/ProductContext'
 import BsktInfoLayout from '../layouts/BsktInfoLayout'
-
+import '../GlobalStyles.css'
 
 function Basket() {
 
