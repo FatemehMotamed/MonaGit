@@ -14,6 +14,13 @@ const numberSlice = createSlice({
         decreamentByamount : (state, action) =>{
             state.numberValue-=action.payload
         }
+    },
+    extraReducers:(builder)=>{
+        builder.addCase("counter/increament",(state)=>{
+            state.numberValue++
+
+        })
+
     }
 })
 
