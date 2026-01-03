@@ -5,6 +5,7 @@ import Search from '../components/Search'
 import { ProductContext } from '../contexts/ProductContext'
 import CategoryList from '../components/CategoryList'
 import BsktInfoLayout from '../layouts/BsktInfoLayout'
+// import '../GlobalStyles.css'
 
 function HomePage() {
 
@@ -14,32 +15,34 @@ function HomePage() {
 
     return (
 
-        <BsktInfoLayout>
+        <div className='w-[335px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto py-[15px]'>
+            <BsktInfoLayout>
 
-            <CategoryList input={input} setCategoryName={setCategoryName} />
-
-
-            {/* error messages */}
-            {state.forSearch && <p className='text-2xl text-red-600'>your search text not found</p>}
-
-            {state.isloading && !state.error && <p>isloading...</p>}
-
-            {state.error && <p>***getting data is failed***</p>}
-            {/* error messages */}
+                <CategoryList input={input} setCategoryName={setCategoryName} />
 
 
-            <Search setInput={setInput} input={input} categoryName={categoryName} />
+                {/* error messages */}
+                {state.forSearch && <p className='text-2xl text-red-600'>your search text not found</p>}
+
+                {state.isloading && !state.error && <p>isloading...</p>}
+
+                {state.error && <p>***getting data is failed***</p>}
+                {/* error messages */}
 
 
-            {/* result search or show main list */}
-            <section className='flex flex-wrap gap-3'>
-                {
-                    state.resultSearch.length > 0 ? state.resultSearch.map(product => <Box key={product.id} product={product} />) : <ProductList />
-                }
-            </section>
-            {/*end result search or show main list */}
+                <Search setInput={setInput} input={input} categoryName={categoryName} />
 
-        </ BsktInfoLayout>
+
+                {/* result search or show main list */}
+                <section className='flex flex-wrap gap-3'>
+                    {
+                        state.resultSearch.length > 0 ? state.resultSearch.map(product => <Box key={product.id} product={product} />) : <ProductList />
+                    }
+                </section>
+                {/*end result search or show main list */}
+
+            </ BsktInfoLayout>
+        </div>
 
     )
 }

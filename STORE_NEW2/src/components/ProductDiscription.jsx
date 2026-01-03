@@ -1,4 +1,5 @@
 import React from 'react'
+import '../GlobalStyles.css'
 
 function ProductDiscription({ product }) {
 
