@@ -9,7 +9,8 @@ function Search({ input, setInput, categoryName }) {
 
     return (
         <>
-            <input value={input} type="text" onChange={(event) => changeHandler(event, state, dispatch, setInput, categoryName)} className='border border-gray-400 p-1' placeholder='product name' />
+            <input value={input} type="text" onChange={(event) =>
+                changeHandler(event, state, dispatch, setInput, categoryName)} className='border border-gray-400 p-1' placeholder='product name' />
         </>
     )
 }

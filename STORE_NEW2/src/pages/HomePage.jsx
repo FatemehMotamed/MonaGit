@@ -27,7 +27,7 @@ function HomePage() {
                 {state.isloading && !state.error && <p>isloading...</p>}
 
                 {state.error && <p>***getting data is failed***</p>}
-                {/* error messages */}
+                {/*end error messages */}
 
 
                 <Search setInput={setInput} input={input} categoryName={categoryName} />
