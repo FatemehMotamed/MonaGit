@@ -4,8 +4,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Box from '../components/Box';
 
-const BoxSwiperSlider = (list) => {
+export const boxSwiperSlider = (userList =[]) => {
     return (
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -21,16 +22,16 @@ const BoxSwiperSlider = (list) => {
                 1450: { slidesPerView: 4 },
             }}
         >
-             {
-                    list.map(product =>
-                        <SwiperSlide key={product.id}>
+            {
+                userList.map(product =>
 
-                            <Box product={product} />
-                        </SwiperSlide>
-                    )
-                }
+                    <SwiperSlide key={product.id}>
+                        <Box product={product} />
+                    </SwiperSlide>
+
+                )
+            }
 
         </Swiper>
     );
 };
-export default BoxSwiperSlider

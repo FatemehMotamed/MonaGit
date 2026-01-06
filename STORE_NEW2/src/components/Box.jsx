@@ -14,8 +14,8 @@ function Box({ product }) {
         <article className="flex flex-col border border-gray-500 w-3xs">
             <figure><img src={product.image} alt={`image of ${product.title}`} className='w-10 h-10' /></figure>
             <p> {product.title} </p>
-            <div className='flex'>
-                <p className='text-red-600 font-bold'>price:&nbsp;</p>
+            <div className='flex text-[#292929] font-bold'>
+                <p className=''>price:&nbsp;</p>
                 <span>{product.price}</span>
             </div>
 
@@ -26,8 +26,8 @@ function Box({ product }) {
                 <img src={check} alt="" className='w-5 h-5' onClick={() => showCounter(product, state, dispatch)} />
             </div>
 
-            <div className='flex'>
-                <p className='text-red-600 font-bold'>totalprice:&nbsp;</p>
+            <div className='flex text-[#292929] font-bold'>
+                <p className=''>totalprice:&nbsp;</p>
                 <span>{product.totalPrice}</span>
             </div>
 

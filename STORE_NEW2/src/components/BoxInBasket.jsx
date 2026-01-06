@@ -11,7 +11,7 @@ function BoxInBasket({ buyListProduct }) {
 
   return (
 
-    <article className='border border-red-900 p-3'>
+    <article className='border border-red-900 p-3 text-[#292929] font-bold'>
       <figure className='w-10'>
         <img src={buyListProduct.image} alt="" />
       </figure>

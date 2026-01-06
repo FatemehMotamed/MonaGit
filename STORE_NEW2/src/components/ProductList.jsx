@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import BoxSwiperSlider from '../servises/SliderHelper';
+// import BoxSwiperSlider from '../servises/SliderHelper';
 
 function ProductList() {
 
@@ -18,13 +18,12 @@ function ProductList() {
 
     return (
         <>
-            {
-
+            {/* {
                 BoxSwiperSlider(state.data)
-            }
+            } */}
 
 
-            {/* 
+            
             <Swiper
 
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -53,7 +52,9 @@ function ProductList() {
                 }
 
 
-            </Swiper> */}
+            </Swiper>
+
+
 
             {/* {
                 state.data.map(product =>

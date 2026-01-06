@@ -1,11 +1,9 @@
 import React, { useContext, useState } from 'react'
-import ProductList from '../components/ProductList'
-import Box from '../components/Box'
 import Search from '../components/Search'
 import { ProductContext } from '../contexts/ProductContext'
 import CategoryList from '../components/CategoryList'
-import BsktInfoLayout from '../layouts/BsktInfoLayout'
-// import '../GlobalStyles.css'
+import HeaderLayout from '../layouts/HeaderLayout'
+import { boxSwiperSlider } from '../servises/SliderHelper'
 
 function HomePage() {
 
@@ -13,10 +11,12 @@ function HomePage() {
     const [input, setInput] = useState('')
     const [categoryName, setCategoryName] = useState('All')
 
+    const userList = state.resultSearch.length > 0 ? state.resultSearch : state.data
+
     return (
 
         <div className='w-[335px] sm:w-[640px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] mx-auto py-[15px]'>
-            <BsktInfoLayout>
+            <HeaderLayout>
 
                 <CategoryList input={input} setCategoryName={setCategoryName} />
 
@@ -36,12 +36,12 @@ function HomePage() {
                 {/* result search or show main list */}
                 <section className='flex flex-wrap gap-3'>
                     {
-                        state.resultSearch.length > 0 ? state.resultSearch.map(product => <Box key={product.id} product={product} />) : <ProductList />
+                        boxSwiperSlider(userList)
                     }
                 </section>
                 {/*end result search or show main list */}
 
-            </ BsktInfoLayout>
+            </ HeaderLayout>
         </div>
 
     )
