@@ -9,6 +9,7 @@ function Users() {
  useEffect(()=>{
     dispath(fetchUsers())
  }, [])
+ 
   return (
 
     <>
