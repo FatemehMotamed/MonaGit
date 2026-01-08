@@ -24,9 +24,9 @@ function HomePage() {
                 {/* error messages */}
                 {state.forSearch && <p className='text-2xl text-red-600'>your search text not found</p>}
 
-                {state.isloading && !state.error && <p>isloading...</p>}
+                {state.isloading && !state.error && <p className='text-[#292929] font-bold'>isloading...</p>}
 
-                {state.error && <p>***getting data is failed***</p>}
+                {state.error && <p className='text-[#292929] font-bold'>***getting data is failed***</p>}
                 {/*end error messages */}
 
 
@@ -34,7 +34,7 @@ function HomePage() {
 
 
                 {/* result search or show main list */}
-                <section className='flex flex-wrap gap-3'>
+                <section className='w-full min-w-0'>
                     {
                         boxSwiperSlider(userList)
                     }

@@ -12,8 +12,8 @@ function Box({ product }) {
 
     return (
         <article className="flex flex-col border border-gray-500 w-3xs">
-            <figure><img src={product.image} alt={`image of ${product.title}`} className='w-10 h-10' /></figure>
-            <p> {product.title} </p>
+            <figure><img src={product.image} alt={`image of ${product.title}`} className='w-10 h-10 text-[#292929] font-bold' /></figure>
+            <p className='text-[#292929] font-bold'> {product.title} </p>
             <div className='flex text-[#292929] font-bold'>
                 <p className=''>price:&nbsp;</p>
                 <span>{product.price}</span>

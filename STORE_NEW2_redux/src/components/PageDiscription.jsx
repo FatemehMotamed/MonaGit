@@ -1,0 +1,32 @@
+import React, { useContext } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
+import ProductDiscription from './ProductDiscription'
+import { ProductContext } from '../contexts/ProductContext'
+import { useSelector } from 'react-redux'
+
+
+function PageDiscription() {
+    // const { state } = useContext(ProductContext)
+
+    // const dispatch = useDispatch()
+    const state = useSelector((state) => state.products)
+    const { id } = useParams()
+    const navigate = useNavigate()
+
+    const goHome = () => {
+        navigate('/', { replace: true })
+    }
+
+    const selectProduct = state.data.find(item => item.id === Number(id))
+    return (
+        <>
+            <button onClick={goHome}>home</button>
+
+            {
+                selectProduct ? <ProductDiscription product={selectProduct} /> : <p>product not found</p>
+            }
+        </>
+    )
+}
+
+export default PageDiscription
