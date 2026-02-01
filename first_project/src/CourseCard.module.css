@@ -1,13 +1,15 @@
-.container{
+.container {
     background-color: aquamarine;
 }
 
-.selected{
+.selected {
     border: solid 3px red;
 }
-.unselected{
+
+.unselected {
     border: dotted 3px green;
 }
+
 /* .test{
     color: blue;
     font-weight: bold;

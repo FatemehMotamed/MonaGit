@@ -1,4 +1,4 @@
-
-body{
+body {
     background-color: #ffffff;
+    background-image: repeating-linear-gradient(90deg, transparent 0 20px, rgba(255, 194, 204, 0.437) 20px 90px);
 }

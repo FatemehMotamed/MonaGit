@@ -1,13 +1,10 @@
-import React, { useContext } from 'react'
-import trash from "../assets/images/trash.svg"
-import { ProductContext } from '../contexts/ProductContext'
-import { decrease, increase, zeroBoxCounter } from '../servises/PaginationsHelper'
+import trash from "../../assets/images/trash.svg"
+import { decrease, increase, zeroBoxCounter } from '../../servises/PaginationsHelper'
 import { useDispatch, useSelector } from 'react-redux'
 
 
 function PageInation({ product }) {
 
-    // const { state, dispatch } = useContext(ProductContext)
     const state = useSelector((state) => state.products)
     const dispatch = useDispatch()
 

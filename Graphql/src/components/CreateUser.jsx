@@ -5,9 +5,11 @@ import { useMutation } from '@apollo/client/react'
 
 
 function CreateUser() {
+
     const [name, setName] = useState("")
     const [username, setUserName] = useState("")
     const [email, setEmail] = useState("")
+
     const [CreateUser, {data, loading, error, called}] = useMutation(CREATE_USER, {
         variables:{
             username,
@@ -16,8 +18,11 @@ function CreateUser() {
 
         }
     })
+
     console.log(data)
+    
   return (
+
     <>
 
     <input type="text" name="" id="" placeholder='username' value={username}   onChange={(e)=> setUserName(e.target.value)} />

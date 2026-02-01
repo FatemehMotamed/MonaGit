@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
-import { addKeysAfterGet, decreaseCounter, mapFunction, totalSum, upDateAfterRemove, updateList } from "../../../servises/ProviderHelper"
+import { addKeysAfterGet, decreaseCounter, mapFunction, totalSum, upDateAfterRemove, updateList } from "../../servises/ProviderHelper"
 
 const initialState = {
     data: [],
@@ -9,7 +9,7 @@ const initialState = {
     buyList: [],
     addCart: 0,
     finalSum: 0,
-    forSearch: false,
+    findUserSearch: false,
 }
 
 const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
@@ -70,13 +70,13 @@ const productSlice = createSlice({
             state.finalSum = finalSum
         },
         search_not_found: (state) => {
-            state.forSearch = true
+            state.findUserSearch = true
             state.error = false
             state.resultSearch = []
         },
         search_found: (state, action) => {
             state.error = false
-            state.forSearch = false
+            state.findUserSearch = false
             state.resultSearch = action.payload ?? []
         },
 

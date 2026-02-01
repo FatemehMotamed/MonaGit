@@ -4,9 +4,9 @@ import { counterSelector, decreament, increament } from '../featurs/counter/Coun
 
 function Counter() {
     // const counter = useSelector((store)=>store.counter.counterValue)
-    const counter = useSelector(counterSelector)
-    const dispatch = useDispatch()
-    console.log(counter)
+    const counter = useSelector(counterSelector) 
+    const dispatch = useDispatch() 
+    console.log(counter) 
     const incHandler = ()=>{
         dispatch(increament())
     }

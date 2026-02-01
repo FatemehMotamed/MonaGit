@@ -1,22 +1,22 @@
 import { Route, Routes } from "react-router-dom"
-import ProductsProvider from "./contexts/ProductsProvider"
-import HomePage from "./pages/HomePage"
-import Basket from "./pages/Basket"
-import PageDiscription from "./components/PageDiscription"
+import HomePage from "./components/pages/HomePage"
+import Basket from "./components/pages/Basket"
+import PageDiscription from "./components/modules/PageDiscription"
+import InputRefprovider from "./contexts/InputRefprovider"
 
 function App() {
 
   return (
     <>
-      {/* <ProductsProvider> */}
+      <InputRefprovider>
 
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/:id" element={<PageDiscription />} />
+          <Route path="/:title/:id" element={<PageDiscription />} />
           <Route path='/Basket' element={<Basket />} />
         </Routes>
 
-      {/* </ProductsProvider> */}
+      </InputRefprovider>
     </>
   )
 }

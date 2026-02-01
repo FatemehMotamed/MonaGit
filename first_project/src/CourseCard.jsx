@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 import styles from "./CourseCard.module.css"
 
 function CourseCard({name, description}) {
+  
   const [show, setshow] = useState(true)
+
   return (
     <div className={`${styles.container} ${show ? styles.selected : styles.unselected}`}>
         <h1 >{name}</h1>

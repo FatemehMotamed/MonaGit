@@ -1,5 +1,5 @@
 import React from 'react'
-import '../GlobalStyles.css'
+import '../../GlobalStyles.css'
 
 function ProductDiscription({ product }) {
 
@@ -9,26 +9,29 @@ function ProductDiscription({ product }) {
             <figure className='w-10'>
                 <img src={product.image} alt={`image of ${product.title}`} />
             </figure>
-            <h3>
+            <div className="flex">
                 <span className='text-red-800 font-bold'>name&nbsp;:</span>&nbsp;&nbsp;
-
-                {product.title}
-            </h3>
-            <p className='pl-25 -indent-25'>
+                <h3 className='text-black'>
+                    {product.title}
+                </h3>
+            </div>
+            <p className='flex'>
                 <span className='text-red-800 font-bold'>discription&nbsp;:</span>&nbsp;&nbsp;
-                {product.description}
+                <p className='text-black'>
+                    {product.description}
+                </p>
             </p>
-            <div>
+            <div className="flex">
                 <span className='text-red-800 font-bold'>price&nbsp;:</span>&nbsp;&nbsp;
-                <span>{`${product.price}$`}</span>
+                <span className='text-black'>{`${product.price}$`}</span>
             </div>
-            <div>
+            <div className="flex">
                 <span className='text-red-800 font-bold'>rate&nbsp;:</span>&nbsp;&nbsp;
-                <span>{product.rating.rate}</span>
+                <span className='text-black'>{product.rating.rate}</span>
             </div>
-            <div>
+            <div className="flex">
                 <span className='text-red-800 font-bold'>count&nbsp;:</span>&nbsp;&nbsp;
-                <span>{product.rating.count}</span>
+                <span className='text-black'>{product.rating.count}</span>
             </div>
         </article>
 

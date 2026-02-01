@@ -1,12 +1,8 @@
 import React from 'react'
-import { useContext } from 'react'
 import PgInateforBskt from './PgInateforBskt'
-import { ProductContext } from '../contexts/ProductContext'
 import { useSelector } from 'react-redux'
 
 function BoxInBasket({ buyListProduct }) {
-
-  // const { state } = useContext(ProductContext)
   
     const state = useSelector((state) => state.products)
 

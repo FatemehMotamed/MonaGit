@@ -34,7 +34,7 @@ function HomePage() {
 
 
                 {/* result search or show main list */}
-                <section className='w-full min-w-0'>
+                <section className='w-full'>
                     {
                         boxSwiperSlider(userList)
                     }

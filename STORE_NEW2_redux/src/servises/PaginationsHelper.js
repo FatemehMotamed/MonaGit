@@ -1,11 +1,11 @@
-import { add_counter, add_item_to_basket, decrease_counter, remove_from_basket, show_counter } from "../components/features/products/ProductsSlice"
+import { add_counter, add_item_to_basket, decrease_counter, remove_from_basket, show_counter } from "../features/products/ProductsSlice"
 
 const zeroBoxCounter = (product, state, dispatch) => {
 
     if (state.addCart >= product.paginate) {
         const totalNumber = state.addCart - product.paginate
         const removeProduct = state.buyList.filter(item => item.id !== product.id)
-        return dispatch(remove_from_basket(removeProduct, totalNumber, product))
+        return dispatch(remove_from_basket({removeProduct, totalNumber, product}))
     }
 }
 

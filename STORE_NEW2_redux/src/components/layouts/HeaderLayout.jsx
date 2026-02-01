@@ -1,7 +1,8 @@
 import React from 'react'
-import Header from '../components/Header'
+import Header from '../modules/Header'
 
 function HeaderLayout({ children }) {
+
     return (
         <>
             <Header />

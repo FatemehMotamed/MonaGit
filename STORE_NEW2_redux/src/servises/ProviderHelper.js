@@ -42,7 +42,7 @@ const decreaseCounter = (list, product) => {
 }
 
 const upDateAfterRemove = (list, product) => {
-    return list.map(item =>
+    return (list?? []).map(item =>
         item.id === product.id ? { ...item, paginate: 0, showNum: false, totalPrice: 0 } : item
     )
 }

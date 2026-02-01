@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -46,9 +47,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,11 +62,55 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
 }
+
 @import "tailwindcss";
+
+/* ==============myStyles */
+.swiper {
+  padding: 20px 0 50px 0 !important;
+  cursor: grab;
+}
+
+.swiper-button-prev {
+  right: var(--swiper-navigation-sides-offset, 4px) !important;
+  left: auto !important;
+  top: 200px !important;
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  color: black;
+  background-color: #2135472c;
+  /* padding: 20px; */
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+svg {
+  color: black !important;
+  /* padding: 20px !important; */
+}
+
+.swiper-button-next {
+  /* right: var(--swiper-navigation-sides-offset, 4px) !important;
+  left: auto !important;
+  top: 200px !important; */
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  color: black;
+  background-color: #2135472c;
+  /* padding: 20px; */
+}
+
+/* ==============myStyles */

@@ -1,6 +1,6 @@
 //Search and category list together.
 
-import { search_found, search_not_found } from "../components/features/products/ProductsSlice"
+import { search_found, search_not_found } from "../features/products/ProductsSlice"
 
 const filterData = (products = [], category, searchTxt) => {
 
@@ -35,7 +35,7 @@ const filterData = (products = [], category, searchTxt) => {
 const changeHandler = (event, state, dispatch, setInput, categoryName) => {
     const myInput = event.target.value
     setInput(myInput)
-
+    
     const data = filterData(state.data, categoryName, myInput)
     if (data.length > 0) {
         dispatch(search_found(data))

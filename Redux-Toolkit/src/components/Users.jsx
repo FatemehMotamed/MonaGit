@@ -7,7 +7,7 @@ function Users() {
  console.log(users);
  
  useEffect(()=>{
-    dispath(fetchUsers())
+    dispath(fetchUsers()) 
  }, [])
  
   return (

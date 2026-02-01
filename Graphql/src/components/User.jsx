@@ -17,6 +17,6 @@ function User() {
         <input type="text"  value={id} onChange={(e) => setId(e.target.value)}/>    
     </>
   )
-}
+} 
 
 export default User

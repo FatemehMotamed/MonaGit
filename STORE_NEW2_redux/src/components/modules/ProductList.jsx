@@ -1,33 +1,22 @@
-import React, { useContext } from 'react'
-import { ProductContext } from '../contexts/ProductContext'
+import React from 'react'
 import Box from './Box'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { useDispatch, useSelector } from 'react-redux';
-// import BoxSwiperSlider from '../servises/SliderHelper';
+import { useSelector } from 'react-redux';
 
 function ProductList() {
 
-    // const { state } = useContext(ProductContext)
 
-    // const dispatch = useDispatch()
-        const state = useSelector((state) => state.products)
+    const state = useSelector((state) => state.products)
 
     return (
         <>
-            {/* {
-                BoxSwiperSlider(state.products.data)
-            } */}
-
-
-            
             <Swiper
 
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -58,12 +47,6 @@ function ProductList() {
 
             </Swiper>
 
-
-
-            {/* {
-                state.products.data.map(product =>
-                    <Box key={product.id} product={product} />)
-            }  */}
 
         </>
     )

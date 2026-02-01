@@ -1,16 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Search from '../components/Search'
-import { ProductContext } from '../contexts/ProductContext'
-import CategoryList from '../components/CategoryList'
+import React, { useEffect, useState } from 'react'
+import Search from '../modules/Search'
+import CategoryList from '../modules/CategoryList'
 import HeaderLayout from '../layouts/HeaderLayout'
-import { boxSwiperSlider } from '../servises/SliderHelper'
+import { boxSwiperSlider } from '../../servises/SliderHelper'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProducts } from '../components/features/products/ProductsSlice'
+import { fetchProducts } from '../../features/products/ProductsSlice'
 
 function HomePage() {
 
     const state = useSelector((state) => state.products)
-
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -33,9 +31,9 @@ function HomePage() {
 
 
                 {/* error messages */}
-                {state.forSearch && <p className='text-2xl text-red-600'>your search text not found</p>}
+                {state.findUserSearch && <p className='text-2xl text-red-600'>your search text not found</p>}
 
-                { state.isloading && !state.error && <p className='text-[#292929] font-bold'>isloading...</p>}
+                {state.isloading && !state.error && <p className='text-[#292929] font-bold'>isloading...</p>}
 
                 {state.error && <p className='text-[#292929] font-bold'>***getting data is failed***</p>}
                 {/*end error messages */}

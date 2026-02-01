@@ -17,7 +17,7 @@ function App() {
 
       {/* <Header /> */}
 
-      <CoursList />
+      {/* <CoursList /> */}
 
       {/* <Banner name="mona" age={39} description = {description}  /> */}
 
