@@ -12,8 +12,8 @@ function App() {
 
     {/* <Users /> */}
     {/* <User /> */}
-    {/* <UserOnclick /> */}
-    <CreateUser />
+    <UserOnclick />
+    {/* <CreateUser /> */}
       
     </>
   )

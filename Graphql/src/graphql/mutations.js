@@ -11,13 +11,13 @@ const CREATE_USER = gql`
         username: $username,
         name: $name,
         email: $email
-    }){
+    })
+    {
         id,
         name
     }
     
     }
-
 `
 
 

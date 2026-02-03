@@ -24,7 +24,7 @@ function SideBar({ setSideBar, sideBar }) {
                             <h3>
                                 {item.title}
                             </h3>
-                            <img src={item.img} alt="" className='w-1/4' />
+                            <img src={item.img} alt="" className='w-1/4 h-1/4' />
                         </NavLink> :
                         <NavLink to='' key={item.id} className={`${styles.fontBlack} flex items-center justify-between px-3 pt-8 pb-11 border-b border-[#e5e1e1]`} style={{ backgroundColor: item.bgColor }}>
                             {item.title}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import Search from '../modules/Search'
 import CategoryList from '../modules/CategoryList'
 import HeaderLayout from '../layouts/HeaderLayout'
@@ -12,10 +12,12 @@ function HomePage() {
     const dispatch = useDispatch()
 
     useEffect(() => {
+        if (!state.data || state.data.length === 0) {
 
-        dispatch(fetchProducts())
+            dispatch(fetchProducts())
+        }
 
-    }, [dispatch])
+    }, [dispatch, state.data])
 
     const [input, setInput] = useState('')
     const [categoryName, setCategoryName] = useState('All')
@@ -33,7 +35,7 @@ function HomePage() {
                 {/* error messages */}
                 {state.findUserSearch && <p className='text-2xl text-red-600'>your search text not found</p>}
 
-                {state.isloading && !state.error && <p className='text-[#292929] font-bold'>isloading...</p>}
+                {state.isLoading && !state.error && <p className='text-[#292929] font-bold'>isLoading...</p>}
 
                 {state.error && <p className='text-[#292929] font-bold'>***getting data is failed***</p>}
                 {/*end error messages */}
@@ -47,6 +49,12 @@ function HomePage() {
                     {
                         boxSwiperSlider(userList)
                     }
+
+                    {/* {
+                        useMemo(() => {
+                           return boxSwiperSlider(userList)
+                        }, [userList,state.data])
+                    } */}
                 </section>
                 {/*end result search or show main list */}
 

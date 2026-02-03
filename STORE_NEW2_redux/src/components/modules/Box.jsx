@@ -19,9 +19,6 @@ function Box({ product }) {
                         <img src={product.image} alt={`image of ${product.title}`} className='h-[371px] lg:h-[610px] bg-[#78757537] rounded-[8px] px-[50px] pt-[20px]' />
                     </figure>
                 </Link>
-<div>
-    <img src="" alt="" />
-</div>
             </div>
 
             <Link to={`/${product.title}/${product.id}`}>

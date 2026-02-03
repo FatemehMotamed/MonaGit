@@ -4,7 +4,7 @@ import { addKeysAfterGet, decreaseCounter, mapFunction, totalSum, upDateAfterRem
 const initialState = {
     data: [],
     error: false,
-    isloading: true,
+    isLoading: true,
     resultSearch: [],
     buyList: [],
     addCart: 0,
@@ -92,16 +92,16 @@ const productSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchProducts.pending, (state) => {
-            state.isloading = true
+            state.isLoading = true
             state.error = false
         }),
             builder.addCase(fetchProducts.fulfilled, (state, action) => {
-                state.isloading = false
+                state.isLoading = false
                 state.data = action.payload ?? []
                 state.error = false
             }),
             builder.addCase(fetchProducts.rejected, (state, action) => {
-                state.isloading = false
+                state.isLoading = false
                 state.data = []
                 state.error = action.error.message ?? true
             })
